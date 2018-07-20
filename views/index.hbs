@@ -1,0 +1,18 @@
+<a href="/">home</a>
+<hr/>
+<h1>{{title}}</h1>
+<h3>{{subtitle}}</h3>
+
+<form method="post" action="/calcFib">
+	<input type="text" name="fibIdx" placeholder="enter array index of fibonacci" style="width:200px;"></input>
+	<input type="submit" value="calculate"></input>
+</form>
+
+
+{{#if fibidx}}
+	<p>Series: [{{fibidx}}]</p>
+{{/if}}
+
+{{#if error}}
+	<p style="color:red;">{{error}}</p>
+{{/if}}
